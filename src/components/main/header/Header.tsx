@@ -27,8 +27,8 @@ const links = [
 
 const Header = () => {
   return (
-    <header className="py-4 flex items-center justify-between">
-      <h1 className="font-bold text-4xl">THE BLOG</h1>
+    <header className="py-6 flex items-center justify-between">
+      <h1 className="font-bold text-2xl">the blog</h1>
 
       <div className="flex items-center gap-8">
         <ul className="flex items-center gap-6">

@@ -1,9 +1,13 @@
+import Hero from "@/components/main/hero/Hero";
+import { Separator } from "@/components/ui/separator";
 import Image from "next/image";
 
 export default function Home() {
   return (
     <main>
-      <h1>Hello World</h1>
+      <Separator />
+      <Hero />
+      <Separator />
     </main>
   );
 }
