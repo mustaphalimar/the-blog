@@ -1,3 +1,5 @@
+"use client";
+
 import Link from "next/link";
 
 import SwitchMode from "@/components/ui/switch-mode";
@@ -27,7 +29,7 @@ const links = [
 
 const Header = () => {
   return (
-    <header className="py-6 flex items-center justify-between">
+    <header className="p-6 flex items-center justify-between">
       <h1 className="font-bold text-2xl">the blog</h1>
 
       <div className="flex items-center gap-8">

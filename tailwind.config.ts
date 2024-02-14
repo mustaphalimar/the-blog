@@ -21,6 +21,9 @@ const config = {
       fontFamily: {
         inter: "var(--font-inter)",
       },
+      fontWeight: {
+        extrabold: "900",
+      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
