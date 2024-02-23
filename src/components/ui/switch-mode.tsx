@@ -27,7 +27,7 @@ const SwitchMode = () => {
   if (!mounted) return null;
 
   return (
-    <div className="relative flex items-center  cursor-pointer">
+    <div className="relative  flex items-center  cursor-pointer">
       <Switch
         className="absolute dark:bg-white"
         onCheckedChange={handleToggle}

@@ -3,36 +3,17 @@
 import Link from "next/link";
 
 import SwitchMode from "@/components/ui/switch-mode";
-
-const links = [
-  {
-    id: 1,
-    title: "Blog",
-    href: "blog",
-  },
-  {
-    id: 2,
-    title: "Projects",
-    href: "projects",
-  },
-  {
-    id: 3,
-    title: "About",
-    href: "about",
-  },
-  {
-    id: 4,
-    title: "Newsletter",
-    href: "newsletter",
-  },
-];
+import { Menu, X } from "lucide-react";
+import { useSidebar } from "@/hooks/use-sidebar";
+import { links } from "@/constants/nav-links";
 
 const Header = () => {
+  const sidebar = useSidebar();
   return (
-    <header className="p-6 flex items-center justify-between">
+    <header className=" max-w-[90%] m-auto py-2 px-4 md:p-6 flex items-center justify-between">
       <h1 className="font-bold text-2xl">the blog</h1>
 
-      <div className="flex items-center gap-8">
+      <div className="items-center gap-8 hidden md:flex">
         <ul className="flex items-center gap-6">
           {links.map((l) => (
             <li key={l.id} className="hover:underline">
@@ -42,6 +23,14 @@ const Header = () => {
         </ul>
 
         <SwitchMode />
+      </div>
+
+      <div className="cursor-pointer block md:hidden ">
+        {sidebar.active ? (
+          <X size={28} onClick={() => sidebar.onHide()} />
+        ) : (
+          <Menu size={28} onClick={() => sidebar.onShow()} />
+        )}
       </div>
     </header>
   );
